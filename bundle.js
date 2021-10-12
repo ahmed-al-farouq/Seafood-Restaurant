@@ -140,26 +140,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/components/footer.js":
-/*!**********************************!*\
-  !*** ./src/components/footer.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _imgs_logo_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../imgs/logo.jpg */ \"./src/imgs/logo.jpg\");\n\n\nconst footer = `\n    <footer class=\"footer\">\n      <div class=\"logo\">\n        <img src=${_imgs_logo_jpg__WEBPACK_IMPORTED_MODULE_0__} alt=\"logo\"/>\n      </div>\n      <div class=\"copyright-names\">\n        <small>&#169; 2021 <a href=\"#\">Ahmed. Al-Farouq &</a><br><a href=\"#\">Francis Ugorji.N.</a><br>Some Rights Reserved</small>\n      </div>\n    </footer>`;\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (footer);\n\n//# sourceURL=webpack://javascript-capstone/./src/components/footer.js?");
-
-/***/ }),
-
-/***/ "./src/components/header.js":
-/*!**********************************!*\
-  !*** ./src/components/header.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _imgs_logo_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../imgs/logo.jpg */ \"./src/imgs/logo.jpg\");\n\n\nconst header = `\n<header>\n  <nav>\n    <div class=\"logo\">\n      <img src=${_imgs_logo_jpg__WEBPACK_IMPORTED_MODULE_0__} alt=\"logo\"/>\n    </div>\n    <ul>\n      <li>\n        <a href=\"#\">\n          Meals(6)\n        </a>\n      </li>\n      <li>\n        <a href=\"#\">\n          Reservation\n        </a>\n      </li>\n      <li>\n        <a href=\"#\">\n          About\n        </a>\n      </li>\n    </ul>\n  </nav>\n</header>\n`;\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n//# sourceURL=webpack://javascript-capstone/./src/components/header.js?");
-
-/***/ }),
-
 /***/ "./src/components/popup.js":
 /*!*********************************!*\
   !*** ./src/components/popup.js ***!
@@ -176,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var _components_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header.js */ \"./src/components/header.js\");\n/* harmony import */ var _components_footer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/footer.js */ \"./src/components/footer.js\");\n/* harmony import */ var _components_popup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/popup.js */ \"./src/components/popup.js\");\n/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n\n\n\n\n\n\nconst createHTML = () => {\n  document.body.innerHTML = _components_header_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"] + _components_footer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"] + (0,_components_popup_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n};\n\ncreateHTML();\n(0,_components_popup_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var _components_popup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/popup.js */ \"./src/components/popup.js\");\n/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n\n\n\n\n\nconst createHTML = () => {\n  document.body.innerHTML = (0,_components_popup_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n};\n\ncreateHTML();\n(0,_components_popup_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
 
 /***/ }),
 
