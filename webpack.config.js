@@ -9,12 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
   },
   plugins: [new HtmlWebpackPlugin({
-    title: 'Leader Board',
+    title: 'Javascript Capstone',
     inject: 'body',
     filename: 'index.html',
   })],
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
+    static: path.resolve(__dirname, './dist'),
     port: 3000,
     open: true,
   },
