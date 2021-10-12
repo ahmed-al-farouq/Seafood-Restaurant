@@ -47,10 +47,10 @@ footer {
   justify-content: center;
   align-content: center;
   gap: 3.9rem;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   right: 0;
-  left: 0;
+  left: 0; */
   box-shadow: 0 1px 2px 3px #000;
 }
 
@@ -79,7 +79,7 @@ footer.footer div.logo img {
   height: 30.25rem;
 }
 
-.image-placeholder img {
+article div.image-container .image-placeholder img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -87,7 +87,7 @@ footer.footer div.logo img {
 
 .closing-icon {
   content: "\f00d";
-  font-size: 2.0rem;
+  font-size: 2rem;
   margin-top: 1rem;
   color: #676767;
   transition: 0.3s;
@@ -114,7 +114,8 @@ footer.footer div.logo img {
   font-size: 1.8rem;
 }
 
-.details-1, .details-2 {
+.details-1,
+.details-2 {
   display: flex;
   flex-direction: column;
 }
@@ -149,7 +150,8 @@ footer.footer div.logo img {
   text-align: center;
 }
 
-input, textarea {
+input,
+textarea {
   margin-bottom: 0.5rem;
   border: 3px solid #000;
   border-radius: 5px;
@@ -205,7 +207,7 @@ input, textarea {
   .image-container {
     gap: 0;
   }
-  
+
   .image-placeholder {
     width: 20.25rem;
     height: 20.25rem;
