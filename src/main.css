@@ -47,10 +47,6 @@ footer {
   justify-content: center;
   align-content: center;
   gap: 3.9rem;
-  /* position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0; */
   box-shadow: 0 1px 2px 3px #000;
 }
 
