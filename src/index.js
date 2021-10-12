@@ -1,6 +1,34 @@
 import './main.css';
-import '@fortawesome/fontawesome-free/css/all.css';
+import logo from './imgs/logo.jpg';
 
-const h1 = document.createElement('h1');
-h1.innerHTML = '<h1>Hello</h1>';
-document.body.append(h1);
+const createHTML = () => {
+  const header = `
+  <header>
+    <nav>
+      <div class="logo">
+        <img src=${logo} alt="logo"/>
+      </div>
+      <ul>
+        <li>
+          <a href="#">
+            Meals(6)
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Reservation
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  `;
+  document.body.innerHTML = header;
+};
+
+createHTML();
