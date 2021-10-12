@@ -1,14 +1,11 @@
 const fetchData = async () => {
   const listContaier = document.getElementById('list');
   const getData = await fetch('https://themealdb.com/api/json/v1/1/filter.php?c=Seafood')
-  .then((res) => res.json())
-  .then((data) => {
-    return data.meals
-  });
+    .then((res) => res.json())
+    .then((data) => data.meals);
   // Create The List
-  console.log(getData[0]);
-  getData.map((item) => {
-    return listContaier.innerHTML += `
+  return getData.map((item) => {
+    listContaier.innerHTML += `
       <li class="item">
         <div class="item-img">
           <img src="${item.strMealThumb}" alt="${item.strMeal}"/>
@@ -27,8 +24,9 @@ const fetchData = async () => {
           <button class="btn" id="reservation-btn">Reservations</button>
         </div>
       </li>
-    `
-  })
-}
+    `;
+    return item;
+  });
+};
 
 export default fetchData;
