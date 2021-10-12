@@ -12,6 +12,7 @@ module.exports = {
     title: 'Javascript Capstone',
     inject: 'body',
     filename: 'index.html',
+    template: 'src/index.html',
   })],
   devServer: {
     static: path.resolve(__dirname, './dist'),
