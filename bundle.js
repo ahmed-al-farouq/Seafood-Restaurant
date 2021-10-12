@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
+eval("const h1 = document.createElement('h1');\nh1.innerHTML = '<h1>Hello</h1>';\ndocument.body.append(h1);\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
 
 /***/ })
 
