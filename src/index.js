@@ -1,9 +1,7 @@
+// import css and icons
 import './main.css';
-import header from './components/header.js';
-import footer from './components/footer.js';
+import '@fortawesome/fontawesome-free/css/all.css';
+// import functions
+import fetchData from './JSFunctions/fetchData.js';
 
-const createHTML = () => {
-  document.body.innerHTML = header + footer;
-};
-
-createHTML();
+fetchData();
