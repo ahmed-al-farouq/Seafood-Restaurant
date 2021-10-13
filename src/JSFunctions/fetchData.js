@@ -1,5 +1,6 @@
 import commentPopup from '../components/popup.js';
 import addLikes from './addLikes.js';
+import itemsCount from './itemsCount.js';
 
 const fetchData = async () => {
   const listContainer = document.getElementById('list');
@@ -8,6 +9,7 @@ const fetchData = async () => {
     .then((data) => data.meals);
   // Create The List
   getData.map((item) => {
+    itemsCount();
     listContainer.innerHTML += `
       <li class="item">
         <div class="item-img">
