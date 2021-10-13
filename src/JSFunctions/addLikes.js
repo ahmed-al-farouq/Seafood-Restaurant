@@ -9,6 +9,6 @@ const addLikes = () => {
       return fetchLikes(true);
     });
   });
-}
+};
 
 export default addLikes;
