@@ -1,25 +1,21 @@
-import logo from '../imgs/logo.jpg';
-
-const commentPopup = () => {
+const commentPopup = (array, buttonIndex) => {
+  let i;
+  array.forEach((meal, arrayIndex) => {
+    if (buttonIndex === arrayIndex) {
+      i = arrayIndex;
+      return i;
+    }
+    return false;
+  });
   const popup = `
-  <article id="4">
+  <article>
     <div class="image-container">
-      <div class="image-placeholder">
-        <img src="${logo}" alt="">
-      </div>
       <i class="fas fa-times closing-icon"></i>
-    </div>
-    <h2 class="seafood-name">Crab</h2>
-    <div class="details-div">
-      <div class="details-1">
-        <p>Seafood</p>
-        <p>Seafood</p>
-      </div>
-      <div class="details-2">
-        <p>seafood</p>
-        <p>seafood</p>
+      <div class="image-placeholder">
+        <img src="${array[i].strMealThumb}" alt="${array[i].strMeal}">
       </div>
     </div>
+    <h2 class="seafood-name">${array[i].strMeal}</h2>
     <div class="comments-header">
       <h3>Comments (2)</h3>
       <div class="comment-container">
