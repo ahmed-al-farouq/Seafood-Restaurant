@@ -12,7 +12,7 @@ const commentPopup = (array, buttonIndex) => {
     <div class="image-container">
       <i class="fas fa-times closing-icon"></i>
       <div class="image-placeholder">
-        <img src="${array[i].strMealThumb}" alt="${array[i].strMeal}">
+        <img src="${array[i].strMealThumb}" alt="${array[i].strMeal}" class="meal-img">
       </div>
     </div>
     <h2 class="seafood-name">${array[i].strMeal}</h2>
