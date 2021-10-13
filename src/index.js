@@ -1,11 +1,6 @@
+// import css and icons
 import './main.css';
-
-import commentPopup from './components/popup.js';
 import '@fortawesome/fontawesome-free/css/all.css';
+import fetchData from './JSFunctions/fetchData.js';
 
-const createHTML = () => {
-  document.body.innerHTML = commentPopup();
-};
-
-createHTML();
-commentPopup();
+fetchData();
