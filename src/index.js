@@ -5,4 +5,4 @@ import fetchData from './JSFunctions/fetchData.js';
 import fetchLikes from './JSFunctions/fetchLikes.js';
 
 fetchData();
-fetchLikes();
+fetchLikes(false);

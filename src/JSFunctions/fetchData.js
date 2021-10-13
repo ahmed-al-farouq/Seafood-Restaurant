@@ -1,4 +1,5 @@
 import commentPopup from '../components/popup.js';
+import addLikes from './addLikes.js';
 
 const fetchData = async () => {
   const listContainer = document.getElementById('list');
@@ -42,6 +43,8 @@ const fetchData = async () => {
       commentsDiv.style.display = 'block';
     });
   });
+  // Add new like
+  addLikes();
 };
 
 export default fetchData;
