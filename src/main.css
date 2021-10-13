@@ -161,13 +161,17 @@ footer.footer div.logo img[alt="logo"] {
 
 .image-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
 .image-placeholder {
-  width: 30.25rem;
-  height: 30.25rem;
+  display: flex;
+  justify-content: center;
+  width: 35.25rem;
+  height: 35.25rem;
 }
 
 article div.image-container .image-placeholder img {
@@ -179,8 +183,13 @@ article div.image-container .image-placeholder img {
 .closing-icon {
   content: "\f00d";
   font-size: 2rem;
-  margin-top: 1rem;
-  color: #676767;
+  background-color: #504f4f;
+  align-self: flex-end;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 15%;
   transition: 0.3s;
 }
 
@@ -194,21 +203,6 @@ article div.image-container .image-placeholder img {
   font-size: 3.5rem;
   margin-top: 1.5rem;
   color: #676767;
-}
-
-.details-div {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 10.5rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.8rem;
-}
-
-.details-1,
-.details-2 {
-  display: flex;
-  flex-direction: column;
 }
 
 .comments-header {
@@ -271,15 +265,45 @@ textarea {
   text-align: start;
 }
 
-.popup-display {
+article {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 1.5rem;
   right: 1.5rem;
+  background-color: #fff;
   z-index: 100;
   overflow-y: auto;
   opacity: 0.95;
+  backdrop-filter: blur(5px);
+}
+
+.inActive {
+  animation: zooms-in 1s ease;
+}
+
+@keyframes zooms-in {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.outActive {
+  animation: zooms-out 1s ease;
+}
+
+@keyframes zooms-out {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -306,12 +330,6 @@ textarea {
 
   .seafood-name {
     margin-top: 1rem;
-  }
-
-  .details-div {
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
   }
 
   textarea {
