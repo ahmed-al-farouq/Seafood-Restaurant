@@ -176,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nlet count = 0;\nconst itemsCount = () => {\n  count += 1;\n  const itemsNum = document.getElementById('items-num');\n  itemsNum.innerHTML = count;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (itemsCount);\n\n//# sourceURL=webpack://javascript-capstone/./src/JSFunctions/itemsCount.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nlet count = 0;\nconst itemsCount = () => {\n  count += 1;\n  const itemsNum = document.getElementById('items-num');\n  itemsNum.innerHTML = count;\n  return count;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (itemsCount);\n\n//# sourceURL=webpack://javascript-capstone/./src/JSFunctions/itemsCount.js?");
 
 /***/ }),
 
