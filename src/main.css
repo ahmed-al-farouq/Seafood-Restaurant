@@ -24,7 +24,7 @@ header nav div.logo {
   height: 70px;
 }
 
-header nav div.logo img {
+.logo img {
   width: 100%;
   height: 100%;
 }
@@ -69,7 +69,7 @@ ul#list li.item div.item-img {
   margin: 10px auto;
 }
 
-ul#list li.item div.item-img img {
+.item-img img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -174,7 +174,7 @@ footer.footer div.logo img[alt="logo"] {
   height: 35.25rem;
 }
 
-article div.image-container .image-placeholder img {
+.image-placeholder img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
