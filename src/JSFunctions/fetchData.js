@@ -1,5 +1,5 @@
 import { showComments, commentPopup } from '../components/popup.js';
-import { fetchFromApi } from './commentsapi.js';
+import { commentsCounter, fetchFromApi } from './commentsapi.js';
 
 const fetchData = async () => {
   const listContainer = document.getElementById('list');
@@ -38,6 +38,8 @@ const fetchData = async () => {
       showComments(index);
       const commentContainer = document.querySelector('.comment-container');
       fetchFromApi(index, commentContainer);
+      const header = document.querySelector('.comments-header h3');
+      commentsCounter(index, header);
       const closingButton = document.querySelector('.closing-icon');
       closingButton.addEventListener('click', () => {
         commentsDiv.style.display = 'none';
