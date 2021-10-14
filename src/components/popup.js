@@ -1,8 +1,9 @@
-import createComments, { fetchFromApi } from '../JSFunctions/commentsapi.js';
+import createComments, { commentsCounter, fetchFromApi } from '../JSFunctions/commentsapi.js';
 
 export const showComments = (id) => {
   const submitButton = document.querySelector('.comment-btn');
   const commentContainer = document.querySelector('.comment-container');
+  const header = document.querySelector('.comments-header h3');
   submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     const name = document.getElementById('name');
@@ -15,6 +16,7 @@ export const showComments = (id) => {
     name.value = '';
     comments.value = '';
     commentContainer.innerHTML = '';
+    commentsCounter(id, header);
     fetchFromApi(id, commentContainer);
   });
 };
@@ -60,3 +62,5 @@ export const commentPopup = (array, buttonIndex) => {
   article.innerHTML = popup;
   return article;
 };
+
+export const countComments = (array) => array.length;
