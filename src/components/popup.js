@@ -1,4 +1,25 @@
-const commentPopup = (array, buttonIndex) => {
+import createComments, { fetchFromApi } from '../JSFunctions/commentsapi.js';
+
+export const showComments = (id) => {
+  const submitButton = document.querySelector('.comment-btn');
+  const commentContainer = document.querySelector('.comment-container');
+  submitButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name');
+    const comments = document.getElementById('comments');
+    if (name.value === '' || comments.value === '') return;
+    await createComments(id, name.value, comments.value);
+    const message = document.querySelector('.message');
+    message.innerHTML = 'Your comment was added';
+    message.style.padding = '0.5rem';
+    name.value = '';
+    comments.value = '';
+    commentContainer.innerHTML = '';
+    fetchFromApi(id, commentContainer);
+  });
+};
+
+export const commentPopup = (array, buttonIndex) => {
   let i;
   array.forEach((meal, arrayIndex) => {
     if (buttonIndex === arrayIndex) {
@@ -7,8 +28,8 @@ const commentPopup = (array, buttonIndex) => {
     }
     return false;
   });
+  const article = document.createElement('article');
   const popup = `
-  <article>
     <div class="image-container">
       <i class="fas fa-times closing-icon"></i>
       <div class="image-placeholder">
@@ -19,8 +40,6 @@ const commentPopup = (array, buttonIndex) => {
     <div class="comments-header">
       <h3>Comments (2)</h3>
       <div class="comment-container">
-        <p>12/10/2019 Alex: I love it!</p>
-        <p>12/10/2019 Alex: I love it!</p>
       </div>
     </div>
     <form class="comments-form" action="#">
@@ -37,9 +56,7 @@ const commentPopup = (array, buttonIndex) => {
         <button type="submit" class="comment-btn">Comment</button>
         <p class="message"></p>
       </div>
-  </article>
   `;
-  return popup;
+  article.innerHTML = popup;
+  return article;
 };
-
-export default commentPopup;
