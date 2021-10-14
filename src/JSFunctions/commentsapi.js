@@ -19,7 +19,6 @@ export const fetchFromApi = async (index, container) => {
     container.innerHTML += `
     <p>${object.creation_date} ${object.username}: ${object.comment}</p>`;
   });
-  console.log('hello');
 };
 
 export default createComments;
