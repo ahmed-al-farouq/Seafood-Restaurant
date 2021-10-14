@@ -12,6 +12,7 @@
   "extends": ["airbnb-base"],
   "rules": {
     "import/no-cycle": "off",
+    "import/no-unresolved": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
