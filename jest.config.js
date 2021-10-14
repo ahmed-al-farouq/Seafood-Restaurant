@@ -1,6 +1,6 @@
 module.exports = {
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
   // "setupFiles": [
   //   "./src/__mocks__/client.js"
   // ],
-}
+};
