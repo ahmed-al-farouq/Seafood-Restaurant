@@ -278,6 +278,15 @@ article {
   backdrop-filter: blur(5px);
 }
 
+.message {
+  background-color: #f5f0e1;
+  color: #441201;
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .inActive {
   animation: zooms-in 1s ease;
 }
