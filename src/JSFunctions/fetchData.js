@@ -1,4 +1,5 @@
-import commentPopup from '../components/popup.js';
+import { showComments, commentPopup } from '../components/popup.js';
+import { fetchFromApi } from './commentsapi.js';
 
 const fetchData = async () => {
   const listContainer = document.getElementById('list');
@@ -33,7 +34,10 @@ const fetchData = async () => {
   commentButton.forEach((button, index) => {
     button.addEventListener('click', () => {
       const commentsDiv = document.querySelector('.comments-section');
-      commentsDiv.innerHTML = commentPopup(getData, index);
+      commentsDiv.innerHTML = commentPopup(getData, index).outerHTML;
+      showComments(index);
+      const commentContainer = document.querySelector('.comment-container');
+      fetchFromApi(index, commentContainer);
       const closingButton = document.querySelector('.closing-icon');
       closingButton.addEventListener('click', () => {
         commentsDiv.style.display = 'none';
