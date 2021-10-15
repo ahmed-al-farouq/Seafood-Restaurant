@@ -45,8 +45,8 @@
 
 :bearded_person::skin-tone-6: **Francis Ugorji**
 
-- GitHub: [@github](https://github.com/Gambit142)
-- LinkedIn: [LinkedIn](www.linkedin.com/in/francis-ugorji-a567b7168)
+- GitHub: [@Gambit142](https://github.com/Gambit142)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/francis-ugorji-a567b7168/)
 
 :bearded_person: **Ahmed Al-Farouq**
   - Github: [@Ahmed-Alfarouq](https://github.com/ahmed-al-farouq)
