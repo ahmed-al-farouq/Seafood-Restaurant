@@ -1,12 +1,12 @@
 # Javascript Capstone
 
-> It's a Seafood Restaurant.
+> This website is a Seafood Restaurant that showcases different seafood meals to users.
 
-![screenshot](./src/imgs/screenshot-full-page.png)
-![screenshot](./src/imgs/pop-up.png)
+> |Home Page       |Modal Window|
+> |--------------|--------------|
+> |![screenshot](./src/imgs/screenshot-full-page.png).|![screenshot2](./src/imgs/pop-up.png)| 
 
-You will find all kinds of meals here and every meal has
-a rate and people's opinion
+> You will find all kinds of Seafood meals here and for every meal, users can like the meals by clicking the heart icon. When a user clicks the comment button, a modal appears and he/she can add comments.
 
 ## Built With
 
@@ -14,6 +14,7 @@ a rate and people's opinion
 - JS & ECMA 6
 - Webpack
 - Linters (eslint, stylelint, hint)
+- Jest (for testing)
 
 ## Live Demo
 
@@ -24,13 +25,14 @@ a rate and people's opinion
   * To get a clone
     * Open your command
     * Type "git clone https://github.com/ahmed-al-farouq/Javascript-capstone.git"
-  * or you can navigate to the code tab and Enjoy!
+
 
 ### Prerequisites
-  #### knoldge of these technologies
+  #### Knowledge of these technologies
   * HTML, CSS
   * JS & ECMA 6
   * Webpack
+  * Jest for testing
 ### Setup
   * Open your command
   * Type "git clone https://github.com/ahmed-al-farouq/Javascript-capstone.git"
@@ -47,11 +49,10 @@ a rate and people's opinion
 
 ## Authors
 
-👤 **Francis Ugorji**
+:bearded_person::skin-tone-6: **Francis Ugorji**
 
 - GitHub: [@github](https://github.com/Gambit142)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/francis-ugorji-a567b7168)
 
 :bearded_person: **Ahmed Al-Farouq**
   - Github: [@Ahmed-Alfarouq](https://github.com/ahmed-al-farouq)
@@ -68,6 +69,12 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## 📝 License
+## Acknowledgments
 
-This project is [MIT](./MIT.md) licensed.
+- **``Microverse``** for the opportunity to underatake such project using their platform
+- To family and friends who motivated us throughout this project
+- [themealdb](https://themealdb.com/api/json/v1/1/filter.php?c=Seefood)
+- [Involvement API Service](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) for granting me permission to fetch data from their site.
+- [Dreamstime.com](https://www.dreamstime.com/stock-illustration-seafood-logo-design-modern-vintage-modern-image94678741) for the logo used in the project
+
+

@@ -29,6 +29,6 @@ export const commentsCounter = async (index, container) => {
   const commentData = await response.json();
   const counter = countComments(commentData);
   container.innerHTML = `
-    <span>Comments(${counter})</span>`;
+    <span>Comments(${counter === undefined ? 0 : counter})</span>`;
 };
 export default createComments;
