@@ -1,4 +1,4 @@
-import itemsCount from '../JSFunctions/itemsCount.js';
+import itemsCount from '../src/JSFunctions/itemsCount.js';
 
 describe('Test itemsCount function', () => {
   document.body.innerHTML = `
