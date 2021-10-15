@@ -1,5 +1,7 @@
 import { showComments, commentPopup } from '../components/popup.js';
 import { commentsCounter, fetchFromApi } from './commentsapi.js';
+import addLikes from './addLikes.js';
+import itemsCount from './itemsCount.js';
 
 const fetchData = async () => {
   const listContainer = document.getElementById('list');
@@ -8,6 +10,7 @@ const fetchData = async () => {
     .then((data) => data.meals);
   // Create The List
   getData.map((item) => {
+    itemsCount();
     listContainer.innerHTML += `
       <li class="item">
         <div class="item-img">
@@ -18,7 +21,7 @@ const fetchData = async () => {
           <h3 class="meal-name">${item.strMeal}</h3>
           <div class="likes-container">
             <i class="fas fa-heart"></i>
-            <span>5 Likes</span>
+            <span class="likes-number"></span>
           </div>
         </div>
 
@@ -30,6 +33,7 @@ const fetchData = async () => {
     `;
     return item;
   });
+  // Apply comments functions
   const commentButton = document.querySelectorAll('.comments-btn');
   commentButton.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -47,6 +51,8 @@ const fetchData = async () => {
       commentsDiv.style.display = 'block';
     });
   });
+  // Add new like
+  addLikes();
 };
 
 export default fetchData;
