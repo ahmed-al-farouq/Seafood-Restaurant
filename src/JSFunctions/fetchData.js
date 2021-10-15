@@ -2,6 +2,8 @@ import { showComments, commentPopup } from '../components/popup.js';
 import { commentsCounter, fetchFromApi } from './commentsapi.js';
 import addLikes from './addLikes.js';
 import itemsCount from './itemsCount.js';
+import displayLikes from './displayLikes.js';
+import fetchLikes from './fetchLikes.js';
 
 const fetchData = async () => {
   const listContainer = document.getElementById('list');
@@ -20,8 +22,8 @@ const fetchData = async () => {
         <div class="body">
           <h3 class="meal-name">${item.strMeal}</h3>
           <div class="likes-container">
-            <i class="fas fa-heart"></i>
-            <span class="likes-number"></span>
+            <i class="fas fa-heart like-icon" id="${item.idMeal}"></i>
+            <span class="item-${item.idMeal}"></span>
           </div>
         </div>
 
@@ -31,7 +33,10 @@ const fetchData = async () => {
         </div>
       </li>
     `;
-    return item;
+    // Fetch Likes before displaying
+    fetchLikes();
+    // Display Likes By id
+    return displayLikes(item.idMeal, false);
   });
   // Apply comments functions
   const commentButton = document.querySelectorAll('.comments-btn');
@@ -51,8 +56,7 @@ const fetchData = async () => {
       commentsDiv.style.display = 'block';
     });
   });
-  // Add new like
+
   addLikes();
 };
-
 export default fetchData;
