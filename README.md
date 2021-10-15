@@ -21,12 +21,6 @@
 [Live Demo Link](https://ahmed-al-farouq.github.io/Javascript-capstone/)
 
 
-## Getting Started
-  * To get a clone
-    * Open your command
-    * Type "git clone https://github.com/ahmed-al-farouq/Javascript-capstone.git"
-
-
 ### Prerequisites
   #### Knowledge of these technologies
   * HTML, CSS

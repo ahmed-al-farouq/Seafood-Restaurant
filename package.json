@@ -103,7 +103,8 @@
     "test": "jest",
     "start": "webpack server --open",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
