@@ -226,7 +226,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _JSFunctions_fetchData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./JSFunctions/fetchData.js */ \"./src/JSFunctions/fetchData.js\");\n\n\n\n\n(0,_JSFunctions_fetchData_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var _fortawesome_fontawesome_free_css_all_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome-free/css/all.css */ \"./node_modules/@fortawesome/fontawesome-free/css/all.css\");\n/* harmony import */ var _JSFunctions_fetchData_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./JSFunctions/fetchData.js */ \"./src/JSFunctions/fetchData.js\");\n/* harmony import */ var _imgs_logo_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./imgs/logo.jpg */ \"./src/imgs/logo.jpg\");\n\n\n\n\n\n(0,_JSFunctions_fetchData_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\nconst logoDivs = document.querySelectorAll('.logo');\nlogoDivs.forEach((div) => {\n  div.innerHTML = `<img src=\"${_imgs_logo_jpg__WEBPACK_IMPORTED_MODULE_3__}\" alt=\"logo\"/>`\n})\n\n//# sourceURL=webpack://javascript-capstone/./src/index.js?");
 
 /***/ }),
 
@@ -377,6 +377,16 @@ eval("module.exports = __webpack_require__.p + \"eeccf4f66002c6f2ba24.woff\";\n\
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"1551f4f60c37af51121f.woff2\";\n\n//# sourceURL=webpack://javascript-capstone/./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2?");
+
+/***/ }),
+
+/***/ "./src/imgs/logo.jpg":
+/*!***************************!*\
+  !*** ./src/imgs/logo.jpg ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"69b070b2fe6ff8b961ed.jpg\";\n\n//# sourceURL=webpack://javascript-capstone/./src/imgs/logo.jpg?");
 
 /***/ })
 
