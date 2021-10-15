@@ -29,7 +29,6 @@ const fetchData = async () => {
 
         <div class="footer">
           <button class="btn comments-btn">Comments</button>
-          <button class="btn reservation-btn">Reservations</button>
         </div>
       </li>
     `;
