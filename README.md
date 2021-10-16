@@ -1,4 +1,4 @@
-# Javascript Capstone
+# Seafood-Restaurant
 
 > This website is a Seafood Restaurant that showcases different seafood meals to users.
 
@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://ahmed-al-farouq.github.io/Javascript-capstone/)
+[Live Demo Link](https://ahmed-al-farouq.github.io/Seafood-Restaurant/)
 
 
 ### Prerequisites
@@ -29,7 +29,7 @@
   * Jest for testing
 ### Setup
   * Open your command
-  * Type "git clone https://github.com/ahmed-al-farouq/Javascript-capstone.git"
+  * Type "git clone https://github.com/ahmed-al-farouq/Seafood-Restaurant.git"
   * npm i
   * npm run start
 ### Install
