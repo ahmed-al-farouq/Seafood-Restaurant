@@ -9,42 +9,106 @@ body {
   overflow-x: hidden;
 }
 
+/* Start Navbar */
 header {
   font-family: 'Italianno', sans-serif;
-  padding: 30px 0 0 0;
+  background-color: #1081af;
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+}
+
+header div.logo {
+  width: 80px;
+}
+
+header div.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 header nav {
   display: flex;
   justify-content: center;
-}
-
-header nav div.logo {
-  width: 70px;
-  height: 70px;
-}
-
-.logo img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  overflow: hidden;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  align-items: center;
+  width: 70%;
   list-style: none;
   font-size: 30px;
-  margin-top: 20px;
 }
 
 header nav ul li {
   cursor: pointer;
   font-weight: 400;
+  text-align: center;
+  position: relative;
+}
+
+header nav ul li.active::after {
+  content: '';
+  display: block;
+  border: 2px solid #0b5876;
+  width: 110px;
+  position: absolute;
+  bottom: -18px;
+  left: -12px;
 }
 
 header nav ul li a {
-  color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  font-size: 55px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+header .menu-icon span {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  width: 40px;
+  height: 5px;
+  background: #fff;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    position: relative;
+    justify-content: space-around;
+  }
+
+  header nav {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background: #1081af;
+    transition: 1s;
+    height: 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li.active::after {
+    bottom: 0;
+  }
 }
 
 /* Start List  */
@@ -69,7 +133,7 @@ ul#list li.item div.item-img {
   margin: 10px auto;
 }
 
-.item-img img {
+ul#list li.item div.item-img img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -174,7 +238,7 @@ footer.footer div.logo img[alt="logo"] {
   height: 35.25rem;
 }
 
-.image-placeholder img {
+footer.footer .image-placeholder img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
