@@ -1,5 +1,7 @@
 import { showComments, commentPopup } from '../components/popup.js';
 import { commentsCounter, fetchFromApi } from './commentsapi.js';
+import { showReservations, reservationPopup } from '../components/reservationPopup.js';
+import { reservationsCounter, fetchReservationsFromApi } from './reservationAPI.js';
 import addLikes from './addLikes.js';
 import itemsCount from './itemsCount.js';
 import displayLikes from './displayLikes.js';
@@ -29,6 +31,7 @@ const fetchData = async () => {
 
         <div class="footer">
           <button class="btn comments-btn">Comments</button>
+          <button class="btn reservations-btn">Reservations</button>
         </div>
       </li>
     `;
@@ -55,7 +58,24 @@ const fetchData = async () => {
       commentsDiv.style.display = 'block';
     });
   });
-
+  // Apply reservation functions
+  const reservationButton = document.querySelectorAll('.reservations-btn');
+  reservationButton.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const reservationDiv = document.querySelector('.reservations-section');
+      reservationDiv.innerHTML = reservationPopup(getData, index).outerHTML;
+      showReservations(index);
+      const reservationContainer = document.querySelector('.reservation-container');
+      fetchReservationsFromApi(index, reservationContainer);
+      const header = document.querySelector('.reservations-header h3');
+      reservationsCounter(index, header);
+      const closingButton = document.querySelector('.closing-icon');
+      closingButton.addEventListener('click', () => {
+        reservationDiv.style.display = 'none';
+      });
+      reservationDiv.style.display = 'block';
+    });
+  });
   addLikes();
 };
 export default fetchData;
