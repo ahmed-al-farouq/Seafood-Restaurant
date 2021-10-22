@@ -21,7 +21,7 @@ export const showComments = (id) => {
   });
 };
 
-export const commentPopup = (array, buttonIndex) => {
+const commentPopup = (array, buttonIndex) => {
   let i;
   array.forEach((meal, arrayIndex) => {
     if (buttonIndex === arrayIndex) {
@@ -61,6 +61,37 @@ export const commentPopup = (array, buttonIndex) => {
   `;
   article.innerHTML = popup;
   return article;
+};
+
+export const popupFunction = (array, index) => {
+  const commentsDiv = document.querySelector('.comments-section');
+  commentsDiv.innerHTML = commentPopup(array, index).outerHTML;
+  const article = document.querySelector('article');
+  article.classList.remove('remove-zoom');
+  article.classList.add('add-zoom');
+};
+
+export const removePopup = () => {
+  setTimeout(() => {
+    const commentsDiv = document.querySelector('.comments-section');
+    const closingButton = document.querySelector('.closing-icon');
+    closingButton.addEventListener('click', () => {
+      const article = document.querySelector('article');
+      article.classList.remove('add-zoom');
+      article.classList.add('remove-zoom');
+    // commentsDiv.style.display = 'none';
+    });
+    commentsDiv.style.display = 'block';
+  }, 1000);
+  // const commentsDiv = document.querySelector('.comments-section');
+  // const closingButton = document.querySelector('.closing-icon');
+  // closingButton.addEventListener('click', () => {
+  //   const article = document.querySelector('article');
+  //   article.classList.remove('add-zoom');
+  //   article.classList.add('remove-zoom');
+  //   // commentsDiv.style.display = 'none';
+  // });
+  // commentsDiv.style.display = 'block';
 };
 
 export const countComments = (array) => array.length;

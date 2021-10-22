@@ -288,11 +288,7 @@ article {
   font-weight: bold;
 }
 
-.inActive {
-  animation: zooms-in 1s ease;
-}
-
-@keyframes zooms-in {
+@keyframes zoomIn {
   0% {
     transform: scale(0);
   }
@@ -302,18 +298,27 @@ article {
   }
 }
 
-.outActive {
-  animation: zooms-out 1s ease;
-}
-
-@keyframes zooms-out {
+@keyframes zoomOut {
   0% {
     transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
   }
 
   100% {
     transform: scale(0);
   }
+}
+
+.add-zoom {
+  animation: zoomIn 1s ease-in;
+}
+
+.remove-zoom {
+  animation: zoomOut 1s ease-out;
+  /* position: relative; */
 }
 
 @media screen and (max-width: 576px) {
