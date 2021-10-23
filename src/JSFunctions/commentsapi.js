@@ -19,7 +19,11 @@ export const fetchFromApi = async (index, container) => {
   const commentData = await response.json();
   commentData.forEach((object) => {
     container.innerHTML += `
-    <p>${object.creation_date} ${object.username}: ${object.comment}</p>`;
+    <div class="comments-div">
+      <p class="person">${object.username}</p>
+      <p class="comment-description">${object.comment}</p>
+      <p class="date">${object.creation_date}</p>
+    </div>`;
   });
 };
 
