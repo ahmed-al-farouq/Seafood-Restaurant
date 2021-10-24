@@ -139,10 +139,17 @@ ul#list li.item div.footer .btn:hover {
 /* Start Footer */
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  gap: 3.9rem;
+  background-color: #1081af;
   box-shadow: 0 1px 2px 3px #000;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 footer.footer div.logo {
@@ -156,7 +163,40 @@ footer.footer div.logo img[alt="logo"] {
 }
 
 .copyright-names {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
   margin-top: 1rem;
+}
+
+.creators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creators p {
+  font-size: 1.5rem;
+  color: #f5da53;
+  font-weight: 600;
+}
+
+.creators a i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+hr {
+  margin: 1rem 3rem;
+}
+
+small {
+  align-self: center;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+  word-spacing: 1.5rem;
+  color: #f5da53;
+  margin-bottom: 1.5rem;
 }
 
 .image-placeholder {
