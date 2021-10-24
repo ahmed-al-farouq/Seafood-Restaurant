@@ -9,42 +9,129 @@ body {
   overflow-x: hidden;
 }
 
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0b5876;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1081af;
+}
+
+/* Start Navbar */
 header {
   font-family: 'Italianno', sans-serif;
-  padding: 30px 0 0 0;
+  background-color: #1081af;
+  display: flex;
+  justify-content: center;
+}
+
+header div.logo {
+  width: 80px;
+  padding: 3px;
+}
+
+header div.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 header nav {
   display: flex;
   justify-content: center;
-}
-
-header nav div.logo {
-  width: 70px;
-  height: 70px;
-}
-
-.logo img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  overflow: hidden;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  align-items: center;
+  width: 70%;
   list-style: none;
   font-size: 30px;
-  margin-top: 20px;
 }
 
 header nav ul li {
   cursor: pointer;
   font-weight: 400;
+  text-align: center;
+  position: relative;
+  width: 140px;
+}
+
+header nav ul li.active::after {
+  content: '';
+  display: block;
+  border: 2px solid #0b5876;
+  width: 100px;
+  position: absolute;
+  bottom: -18px;
+  left: 20px;
 }
 
 header nav ul li a {
-  color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  font-size: 55px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+header .menu-icon span {
+  display: none;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  width: 40px;
+  height: 5px;
+  background: #fff;
+  margin-top: 2px;
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    position: relative;
+    justify-content: space-around;
+  }
+
+  header nav {
+    position: absolute;
+    top: 77px;
+    width: 100%;
+    background: #1081af;
+    transition: 1s;
+    height: 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li.active::after {
+    bottom: 0;
+  }
+
+  header .menu-icon span {
+    display: flex;
+  }
 }
 
 /* Start List  */
@@ -69,7 +156,7 @@ ul#list li.item div.item-img {
   margin: 10px auto;
 }
 
-.item-img img {
+ul#list li.item div.item-img img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -136,30 +223,67 @@ ul#list li.item div.footer .btn:hover {
   cursor: pointer;
 }
 
-/* Start Footer */
-footer {
+/* Start About */
+.about-section {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.about-section .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b5876;
+  width: 100%;
+  height: 400px;
+}
+
+.about-section .header h2.title {
+  color: #1081af;
+  font-size: 70px;
+  font-family: 'Italianno', sans-serif;
+}
+
+.about-section .header p.description {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-section .body {
+  background-color: #ebf5f5;
+  padding: 20px;
+  height: 350px;
   display: flex;
   justify-content: center;
-  align-content: center;
-  gap: 3.9rem;
-  box-shadow: 0 1px 2px 3px #000;
+  align-items: center;
 }
 
-footer.footer div.logo {
-  width: 80px;
-  height: 80px;
+.about-section .body p.description {
+  font-size: 21px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  width: 50%;
+  margin: auto;
 }
 
-footer.footer div.logo img[alt="logo"] {
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 786px) {
+  .about-section .body {
+    height: auto;
+  }
+
+  .about-section .body p.description {
+    width: 90%;
+  }
 }
 
-.copyright-names {
-  margin-top: 1rem;
-}
-
-.image-container {
+/* Start Comments */
+.comments-section .image-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,17 +291,11 @@ footer.footer div.logo img[alt="logo"] {
   gap: 2rem;
 }
 
-.image-placeholder {
+.comments-section .image-placeholder {
   display: flex;
   justify-content: center;
   width: 35.25rem;
   height: 35.25rem;
-}
-
-.image-placeholder img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
 }
 
 .closing-icon {
@@ -345,4 +463,104 @@ article {
   textarea {
     width: 20em;
   }
+}
+
+/* Start Reservations */
+.reservations-section .image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.reservations-section .image-placeholder {
+  display: flex;
+  justify-content: center;
+  width: 40.25rem;
+  height: 26.25rem;
+}
+
+.reservations-section .image-placeholder .meal-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 1px #1081afd1;
+}
+
+.reservations-header {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-family: 'Italianno', sans-serif;
+  font-size: 2.5rem;
+}
+
+.reservation-container {
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.reservation-container p {
+  padding: 0 1rem 1.5rem 1rem;
+}
+
+.reservations-form {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 1rem;
+}
+
+.reservations-form h2 {
+  font-family: 'Italianno', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#reservations {
+  font-size: 0.95rem;
+  padding: 0.7rem;
+  color: #000;
+}
+
+#reservations::placeholder {
+  color: #000;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.reservation-btn {
+  padding: 0.5rem 0.55rem;
+  border: 2px solid #000;
+  box-shadow: 0 0 4px 3px #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+/* Start Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 3.9rem;
+  box-shadow: 0 1px 2px 3px #000;
+}
+
+footer.footer div.logo {
+  width: 80px;
+  height: 80px;
+}
+
+footer.footer div.logo img[alt="logo"] {
+  width: 100%;
+  height: 100%;
+}
+
+.copyright-names {
+  margin-top: 1rem;
 }
