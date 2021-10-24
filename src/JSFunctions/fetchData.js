@@ -1,4 +1,4 @@
-import { showComments, commentPopup } from '../components/popup.js';
+import { showComments, popupFunction, removePopup } from '../components/popup.js';
 import { commentsCounter, fetchFromApi } from './commentsapi.js';
 import { showReservations, reservationPopup } from '../components/reservationPopup.js';
 import { reservationsCounter, fetchReservationsFromApi } from './reservationAPI.js';
@@ -44,18 +44,13 @@ const fetchData = async () => {
   const commentButton = document.querySelectorAll('.comments-btn');
   commentButton.forEach((button, index) => {
     button.addEventListener('click', () => {
-      const commentsDiv = document.querySelector('.comments-section');
-      commentsDiv.innerHTML = commentPopup(getData, index).outerHTML;
+      popupFunction(getData, index);
       showComments(index);
       const commentContainer = document.querySelector('.comment-container');
       fetchFromApi(index, commentContainer);
       const header = document.querySelector('.comments-header h3');
       commentsCounter(index, header);
-      const closingButton = document.querySelector('.closing-icon');
-      closingButton.addEventListener('click', () => {
-        commentsDiv.style.display = 'none';
-      });
-      commentsDiv.style.display = 'block';
+      removePopup();
     });
   });
   // Apply reservation functions

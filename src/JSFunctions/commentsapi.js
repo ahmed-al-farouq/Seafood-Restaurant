@@ -1,6 +1,6 @@
 import { countComments } from '../components/popup.js';
 
-const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/WrdIYl3nn41qFAt1vMNj/comments';
+const commentsUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VJw9ODgbBtlmMkX50mSI/comments';
 const createComments = async (id, nameValue, commentValue) => {
   const response = await fetch(commentsUrl, {
     method: 'POST',
@@ -14,17 +14,21 @@ const createComments = async (id, nameValue, commentValue) => {
 };
 
 export const fetchFromApi = async (index, container) => {
-  const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/WrdIYl3nn41qFAt1vMNj/comments?item_id=${index}`;
+  const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VJw9ODgbBtlmMkX50mSI/comments?item_id=${index}`;
   const response = await fetch(URL);
   const commentData = await response.json();
   commentData.forEach((object) => {
     container.innerHTML += `
-    <p>${object.creation_date} ${object.username}: ${object.comment}</p>`;
+    <div class="comments-div">
+      <p class="person">${object.username}</p>
+      <p class="comment-description">${object.comment}</p>
+      <p class="date">${object.creation_date}</p>
+    </div>`;
   });
 };
 
 export const commentsCounter = async (index, container) => {
-  const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/WrdIYl3nn41qFAt1vMNj/comments?item_id=${index}`;
+  const URL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/VJw9ODgbBtlmMkX50mSI/comments?item_id=${index}`;
   const response = await fetch(URL);
   const commentData = await response.json();
   const counter = countComments(commentData);

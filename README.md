@@ -43,7 +43,7 @@
 
 ## Authors
 
-:bearded_person::skin-tone-6: **Francis Ugorji**
+:man::skin-tone-6: **Francis Ugorji**
 
 - GitHub: [@Gambit142](https://github.com/Gambit142)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/francis-ugorji-a567b7168/)
