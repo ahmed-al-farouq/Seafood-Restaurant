@@ -307,7 +307,7 @@ ul#list li.item div.footer .btn:hover {
   height: 20.25rem;
 }
 
-.comments-section .image-placeholder img,
+.comments-section .meal-img,
 .reservations-section .image-placeholder .meal-img {
   width: 100%;
   height: 100%;
@@ -712,7 +712,7 @@ footer.footer div.logo img[alt="logo"] {
   font-weight: 600;
 }
 
-footer.footer .creators a i {
+footer.footer .creators a i.fab {
   font-size: 1.5rem;
   color: #fff;
 }
