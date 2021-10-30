@@ -35,7 +35,7 @@ export const reservationPopup = (array, buttonIndex) => {
   const article = document.createElement('article');
   const popup = `
     <div class="image-container">
-      <i class="fas fa-times closing-icon"></i>
+      <i class="fas fa-times reservation-closing-icon"></i>
       <div class="image-placeholder">
         <img src="${array[i].strMealThumb}" alt="${array[i].strMeal}" class="meal-img">
       </div>

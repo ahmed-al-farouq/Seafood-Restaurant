@@ -64,7 +64,7 @@ const fetchData = async () => {
       fetchReservationsFromApi(index, reservationContainer);
       const header = document.querySelector('.reservations-header h3');
       reservationsCounter(index, header);
-      const closingButton = document.querySelector('.closing-icon');
+      const closingButton = document.querySelector('.reservation-closing-icon');
       closingButton.addEventListener('click', () => {
         reservationDiv.style.display = 'none';
       });
