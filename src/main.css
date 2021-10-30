@@ -84,25 +84,16 @@ header nav ul li a {
 }
 
 header .menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition: 0.5s;
-  font-size: 55px;
-  color: white;
+  font-size: 30px;
+  color: hsl(50deg 89% 65%);
   font-weight: bold;
   margin-top: 10px;
+  display: none;
 }
 
-header .menu-icon span {
-  display: none;
-  border: 1px solid #fff;
-  border-radius: 1px;
-  width: 40px;
-  height: 5px;
-  background: #fff;
-  margin-top: 2px;
+header .menu-icon .close-icon {
+  font-size: 55px;
 }
 
 @media screen and (max-width: 991px) {
@@ -113,9 +104,9 @@ header .menu-icon span {
 
   header nav {
     position: absolute;
-    top: 77px;
+    top: 115px;
     width: 100%;
-    background: #1081af;
+    background-color: #340606;
     transition: 1s;
     height: 0;
   }
@@ -128,8 +119,9 @@ header .menu-icon span {
     bottom: 0;
   }
 
-  header .menu-icon span {
+  header .menu-icon {
     display: flex;
+    align-items: center;
   }
 }
 

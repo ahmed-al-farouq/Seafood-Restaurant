@@ -3,11 +3,9 @@ const nav = document.querySelector('.nav');
 
 menuIcon.addEventListener('click', () => {
   menuIcon.style.opacity = '0';
-  if (menuIcon.innerHTML === '×') {
+  if (menuIcon.firstChild.innerHTML === '×') {
     menuIcon.innerHTML = `
-    <span></span>
-    <span></span>
-    <span></span>
+    <i class="fas fa-bars"></i>
     `;
     setTimeout(() => {
       menuIcon.style.opacity = '1';
@@ -15,7 +13,7 @@ menuIcon.addEventListener('click', () => {
     nav.style.height = '0';
   } else {
     setTimeout(() => {
-      menuIcon.innerHTML = '&times;';
+      menuIcon.innerHTML = '<span class="close-icon">&times;</span>';
       menuIcon.style.opacity = '1';
     }, 240);
     nav.style.height = '175px';
