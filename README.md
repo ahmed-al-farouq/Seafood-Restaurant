@@ -69,6 +69,6 @@ Give a ⭐️ if you like this project!
 - To family and friends who motivated us throughout this project
 - [themealdb](https://themealdb.com/api/json/v1/1/filter.php?c=Seefood)
 - [Involvement API Service](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) for granting me permission to fetch data from their site.
-- [Dreamstime.com](https://www.dreamstime.com/stock-illustration-seafood-logo-design-modern-vintage-modern-image94678741) for the logo used in the project
+- [Causeaway Seafood Restaurant](https://causewayrestaurant.ph/) for the logo used in the project
 
 
