@@ -460,8 +460,8 @@ article {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
+  left: 0;
+  right: 0;
   padding-bottom: 0.1rem;
   background-color: #fff;
   z-index: 100;
