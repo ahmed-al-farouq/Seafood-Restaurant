@@ -260,6 +260,7 @@ ul#list li.item div.footer .btn:hover {
   padding: 20px;
   height: 350px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
