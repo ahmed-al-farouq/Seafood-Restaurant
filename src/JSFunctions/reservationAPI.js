@@ -24,7 +24,10 @@ export const fetchReservationsFromApi = async (index, container) => {
   const reservationsData = await response.json();
   reservationsData.forEach((reservation) => {
     container.innerHTML += `
-    <p>${reservation.date_start} - ${reservation.date_end} by ${reservation.username}</p>`;
+    <p>
+      <span class="name"> ${reservation.username} </span>
+      <span class="reservation-date">${reservation.date_start} / ${reservation.date_end} </span>
+    </p>`;
   });
 };
 
