@@ -19,25 +19,24 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0b5876;
+  background: hsl(11deg 87% 75%);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1081af;
+  background: #340606;
 }
 
 /* Start Navbar */
 header {
   font-family: 'Italianno', sans-serif;
-  background-color: #1081af;
+  background-color: #340606;
   display: flex;
   justify-content: center;
 }
 
 header div.logo {
-  width: 80px;
-  padding: 3px;
+  width: 110px;
 }
 
 header div.logo img {
@@ -72,15 +71,15 @@ header nav ul li {
 header nav ul li.active::after {
   content: '';
   display: block;
-  border: 2px solid #0b5876;
+  border: 2px solid hsl(11deg 87% 75%);
   width: 100px;
   position: absolute;
-  bottom: -18px;
+  bottom: -4px;
   left: 20px;
 }
 
 header nav ul li a {
-  color: #fff;
+  color: hsl(50deg 89% 65%);
   text-decoration: none;
 }
 
@@ -172,7 +171,7 @@ ul#list li.item div.body .meal-name {
   font-weight: 600;
   font-family: 'Italianno', sans-serif;
   font-size: 31px;
-  color: #676767;
+  color: #340606;
 }
 
 ul#list li.item div.body .likes-container {
@@ -186,13 +185,13 @@ ul#list li.item div.body .likes-container {
 ul#list li.item div.body .likes-container i {
   font-size: 25px;
   margin-top: 5px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #340606;
   cursor: pointer;
   transition: 0.3s;
 }
 
 ul#list li.item div.body .likes-container i:hover {
-  color: rgb(0, 0, 0);
+  color: #340606ef;
 }
 
 ul#list li.item div.body .likes-container i.liked {
@@ -237,13 +236,13 @@ ul#list li.item div.footer .btn:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0b5876;
+  background-color: #340606f5;
   width: 100%;
   height: 400px;
 }
 
 .about-section .header h2.title {
-  color: #1081af;
+  color: hsl(50deg 89% 65%);
   font-size: 70px;
   font-family: 'Italianno', sans-serif;
   align-content: center;
@@ -284,17 +283,36 @@ ul#list li.item div.footer .btn:hover {
 }
 
 /* Start Comments */
-.comments-section .image-placeholder {
+.comments-section-container,
+.reservations-section-container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
+  margin-top: 10px;
+}
+
+.comments-section .image-container,
+.reservations-section .image-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 22.25rem;
+  align-items: center;
+}
+
+.comments-section .image-placeholder,
+.reservations-section .image-placeholder {
+  width: 29.25rem;
   height: 20.25rem;
 }
 
-.comments-section .image-placeholder img {
+.comments-section .image-placeholder img,
+.reservations-section .image-placeholder .meal-img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 1px hsl(11deg 87% 75%);
 }
 
 .closing-btn-div {
@@ -303,7 +321,7 @@ ul#list li.item div.footer .btn:hover {
 }
 
 .closing-icon,
-.reservation-closing-icon { 
+.reservation-closing-icon {
   content: "\f00d";
   font-size: 2rem;
   background-color: hsl(11deg 89% 16%);
@@ -326,6 +344,7 @@ ul#list li.item div.footer .btn:hover {
 
 .card-div {
   display: flex;
+  justify-content: center;
 }
 
 .seafood-name {
@@ -346,20 +365,26 @@ ul#list li.item div.footer .btn:hover {
   color: hsl(11deg 89% 16%);
 }
 
-.comments-div {
+.comments-div,
+.reservation-container p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: #340606;
   border: 1px solid transparent;
-  border-radius: 25px;
+  border-radius: 10px;
   color: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
-.comment-container {
+.comment-container,
+.reservation-container {
   margin-top: 1rem;
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
+  height: 250px;
+  overflow: scroll;
 }
 
 .comment-container p {
@@ -384,7 +409,8 @@ p.comment-description {
   font-size: 1.3rem;
 }
 
-.comments-form {
+.comments-form,
+.reservations-form {
   margin-top: 2.5rem;
   font-family: 'Roboto', sans-serif;
   padding-bottom: 1rem;
@@ -484,11 +510,11 @@ article {
 }
 
 .add-zoom {
-  animation: zoomIn 1s ease-in;
+  animation: zoomIn 0.8s ease-in;
 }
 
 .remove-zoom {
-  animation: zoomOut 1s ease-out forwards;
+  animation: zoomOut 0.8s ease-out forwards;
 }
 
 @media screen and (max-width: 576px) {
@@ -580,28 +606,6 @@ article {
 }
 
 /* Start Reservations */
-.reservations-section .image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.reservations-section .image-placeholder {
-  display: flex;
-  justify-content: center;
-  width: 40.25rem;
-  height: 26.25rem;
-}
-
-.reservations-section .image-placeholder .meal-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  box-shadow: 0 0 8px 1px #1081afd1;
-}
-
 .reservations-header {
   text-align: center;
   margin-top: 2.5rem;
@@ -609,30 +613,26 @@ article {
   font-size: 2.5rem;
 }
 
-.reservation-container {
-  margin-top: 1rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  height: 150px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.reservation-container p {
-  padding: 0 1rem 1.5rem 1rem;
-}
-
-.reservations-form {
-  margin-top: 2.5rem;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom: 1rem;
-}
-
 .reservations-form h2 {
   font-family: 'Italianno', sans-serif;
   font-size: 2.5rem;
   text-align: center;
+}
+
+.reservation-container p span.reservation-date {
+  display: block;
+  color: hsl(50deg 89% 65%);
+  font-size: 13px;
+  padding: 5px;
+}
+
+.reservation-container p span.name {
+  color: hsl(11deg 87% 75%);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.5rem;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
 #reservations {
@@ -669,7 +669,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: #1081af;
+  background-color: #340606;
   box-shadow: 0 1px 2px 3px #000;
   font-family: 'Roboto', sans-serif;
 }
@@ -681,8 +681,7 @@ footer {
 }
 
 footer.footer div.logo {
-  width: 80px;
-  height: 80px;
+  width: 140px;
 }
 
 footer.footer div.logo img[alt="logo"] {
@@ -727,6 +726,6 @@ small {
   letter-spacing: 0.3rem;
   font-size: 1rem;
   word-spacing: 1.5rem;
-  color: #f5da53;
+  color: hsl(50deg 89% 65%);
   margin-bottom: 1.5rem;
 }

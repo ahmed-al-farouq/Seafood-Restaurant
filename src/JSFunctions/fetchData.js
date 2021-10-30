@@ -66,8 +66,15 @@ const fetchData = async () => {
       reservationsCounter(index, header);
       const closingButton = document.querySelector('.reservation-closing-icon');
       closingButton.addEventListener('click', () => {
-        reservationDiv.style.display = 'none';
+        const article = document.querySelector('.reservation-article');
+        article.classList.remove('add-zoom');
+        article.classList.add('remove-zoom');
+        setTimeout(() => {
+          reservationDiv.style.display = 'none';
+        }, 1000);
       });
+      const article = document.querySelector('.reservation-article');
+      article.classList.add('add-zoom');
       reservationDiv.style.display = 'block';
     });
   });

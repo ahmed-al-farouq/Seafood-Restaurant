@@ -43,25 +43,27 @@ const commentPopup = (array, buttonIndex) => {
           </div>
         </div>
         <h2 class="seafood-name">${array[i].strMeal}</h2>
-        <form class="comments-form" action="#">
-          <h2>Add a comment</h2>
-          <div class="form-container">
-            <div>
-              <label for="name"></label>
-              <input type="text" id="name" name="name" placeholder="Your Name">
+        <div class="comments-section-container">
+          <form class="comments-form" action="#">
+            <h2>Add a comment</h2>
+            <div class="form-container">
+              <div>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+              </div>
+              <div>
+                <label for="comment"></label>
+                <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Your comments"></textarea>
+              </div>
+              <button type="submit" class="comment-btn">Comment</button>
+              <p class="message"></p>
             </div>
-            <div>
-              <label for="comment"></label>
-              <textarea id="comments" name="comments" rows="5" cols="40" placeholder="Your comments"></textarea>
+          </form>
+          <div class="comments-header">
+            <h3>Comments (2)</h3>
+            <div class="comment-container">
             </div>
-            <button type="submit" class="comment-btn">Comment</button>
-            <p class="message"></p>
           </div>
-        </form>
-      </div>
-      <div class="comments-header">
-        <h3>Comments (2)</h3>
-        <div class="comment-container">
         </div>
       </div>
     </div>

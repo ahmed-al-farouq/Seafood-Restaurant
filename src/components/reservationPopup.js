@@ -33,6 +33,7 @@ export const reservationPopup = (array, buttonIndex) => {
     return false;
   });
   const article = document.createElement('article');
+  article.classList.add('reservation-article');
   const popup = `
     <div class="image-container">
       <i class="fas fa-times reservation-closing-icon"></i>
@@ -41,29 +42,32 @@ export const reservationPopup = (array, buttonIndex) => {
       </div>
     </div>
     <h2 class="seafood-name">${array[i].strMeal}</h2>
-    <div class="reservations-header">
-      <h3></h3>
-      <div class="reservation-container">
+    <div class="reservations-section-container">
+      <form class="reservations-form" action="#">
+        <h2>Add a reservation</h2>
+        <div class="form-container">
+          <div>
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Your Name">
+          </div>
+          <div>
+            <label for="reservations"></label>
+            <input type="date" id="start-date" name="start-date" placeholder="Start Date"/>
+          </div>
+          <div>
+            <label for="reservations"></label>
+            <input type="date" id="end-date" name="end-date" placeholder="End Date"/>
+          </div>
+          <button type="submit" class="reservation-btn">Reservation</button>
+          <p class="message"></p>
+        </div>
+      </form>
+      <div class="reservations-header">
+        <h3></h3>
+        <div class="reservation-container">
+        </div>
       </div>
     </div>
-    <form class="reservations-form" action="#">
-      <h2>Add a reservation</h2>
-      <div class="form-container">
-        <div>
-          <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="Your Name">
-        </div>
-        <div>
-          <label for="reservations"></label>
-          <input type="date" id="start-date" name="start-date" placeholder="Start Date"/>
-        </div>
-        <div>
-          <label for="reservations"></label>
-          <input type="date" id="end-date" name="end-date" placeholder="End Date"/>
-        </div>
-        <button type="submit" class="reservation-btn">Reservation</button>
-        <p class="message"></p>
-      </div>
   `;
   article.innerHTML = popup;
   return article;
