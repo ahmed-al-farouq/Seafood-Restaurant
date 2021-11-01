@@ -1,0 +1,724 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(11deg 87% 75%);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #340606;
+}
+
+/* Start Navbar */
+header {
+  font-family: 'Italianno', sans-serif;
+  background-color: #340606;
+  display: flex;
+  justify-content: center;
+}
+
+header div.logo {
+  width: 110px;
+}
+
+header div.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  overflow: hidden;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  list-style: none;
+  font-size: 30px;
+}
+
+header nav ul li {
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  width: 140px;
+}
+
+header nav ul li.active::after {
+  content: '';
+  display: block;
+  border: 2px solid hsl(11deg 87% 75%);
+  width: 100px;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+header nav ul li a {
+  color: hsl(50deg 89% 65%);
+  text-decoration: none;
+}
+
+header .menu-icon {
+  transition: 0.5s;
+  font-size: 30px;
+  color: hsl(50deg 89% 65%);
+  font-weight: bold;
+  margin-top: 10px;
+  display: none;
+}
+
+header .menu-icon .close-icon {
+  font-size: 55px;
+}
+
+@media screen and (max-width: 991px) {
+  header {
+    position: relative;
+    justify-content: space-around;
+  }
+
+  header nav {
+    position: absolute;
+    top: 115px;
+    width: 100%;
+    background-color: #340606;
+    transition: 1s;
+    height: 0;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li.active::after {
+    bottom: 0;
+  }
+
+  header .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Start List  */
+ul#list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+}
+
+ul#list li.item {
+  width: 400px;
+  margin: 20px 10px;
+}
+
+ul#list li.item div.item-img {
+  width: 100%;
+  height: 25%;
+  margin: 10px auto;
+}
+
+ul#list li.item div.item-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+ul#list li.item div.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#list li.item div.body .meal-name {
+  font-weight: 600;
+  font-family: 'Italianno', sans-serif;
+  font-size: 31px;
+  color: #340606;
+}
+
+ul#list li.item div.body .likes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  gap: 1px;
+}
+
+ul#list li.item div.body .likes-container i {
+  font-size: 25px;
+  margin-top: 5px;
+  color: #340606;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul#list li.item div.body .likes-container i:hover {
+  color: #340606ef;
+}
+
+ul#list li.item div.body .likes-container i.liked {
+  color: #c50f0f;
+}
+
+ul#list li.item div.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul#list li.item div.footer .btn {
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  width: 80%;
+  padding: 4px 0;
+  margin: 11px 0;
+  background: transparent;
+  box-shadow: 0 0 3px 0 black;
+  transition: 0.5s;
+}
+
+ul#list li.item div.footer .btn:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.925);
+  cursor: pointer;
+}
+
+/* Start About */
+.about-section {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.about-section .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #340606f5;
+  width: 100%;
+  height: 400px;
+}
+
+.about-section .header h2.title {
+  color: hsl(50deg 89% 65%);
+  font-size: 70px;
+  font-family: 'Italianno', sans-serif;
+  align-content: center;
+}
+
+.about-section .header p.description {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-section .body {
+  background-color: #ebf5f5;
+  padding: 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section .body p.description {
+  font-size: 21px;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  width: 50%;
+  margin: auto;
+}
+
+@media screen and (max-width: 786px) {
+  .about-section .body {
+    height: auto;
+  }
+
+  .about-section .body p.description {
+    width: 90%;
+  }
+}
+
+/* Start Comments */
+.comments-section-container,
+.reservations-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5rem;
+  margin-top: 10px;
+}
+
+.comments-section .image-container,
+.reservations-section .image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments-section .image-placeholder,
+.reservations-section .image-placeholder {
+  width: 29.25rem;
+  height: 20.25rem;
+}
+
+.comments-section .meal-img,
+.reservations-section .image-placeholder .meal-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 8px 1px hsl(11deg 87% 75%);
+}
+
+.closing-btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closing-icon,
+.reservation-closing-icon {
+  content: "\f00d";
+  font-size: 2rem;
+  background-color: hsl(11deg 89% 16%);
+  align-self: flex-end;
+  margin-top: 0.4rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 15%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.closing-icon:hover {
+  background-color: #fff;
+  color: hsl(11deg 89% 16%);
+  border: 1px solid hsl(11deg 89% 16%);
+}
+
+.card-div {
+  display: flex;
+  justify-content: center;
+}
+
+.seafood-name {
+  text-align: center;
+  font-family: 'Italianno', sans-serif;
+  font-size: 3.5rem;
+  margin-top: 1.5rem;
+  color: hsl(11deg 89% 16%);
+}
+
+.comments-header {
+  text-align: center;
+  font-family: 'Italianno', sans-serif;
+  font-size: 2.5rem;
+}
+
+.comments-header h3 span {
+  color: hsl(11deg 89% 16%);
+}
+
+.comments-div,
+.reservation-container p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #340606;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.comment-container,
+.reservation-container {
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  height: 250px;
+  overflow: scroll;
+}
+
+.comment-container p {
+  padding: 1rem 1rem 0 1rem;
+  text-align: start;
+}
+
+.person {
+  color: hsl(11deg 87% 75%);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+p.date {
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: hsl(50deg 89% 65%);
+}
+
+p.comment-description {
+  font-size: 1.3rem;
+}
+
+.comments-form,
+.reservations-form {
+  margin-top: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.comments-form h2 {
+  font-family: 'Italianno', sans-serif;
+  font-size: 2.5rem;
+  color: hsl(11deg 89% 16%);
+}
+
+input,
+textarea {
+  margin-bottom: 0.5rem;
+  border: 3px solid hsl(11deg 89% 16%);
+  border-radius: 5px;
+  box-shadow: 5px 1px 3px 1px;
+}
+
+#name,
+#comments {
+  font-size: 0.95rem;
+  padding: 0.7rem;
+  color: #000;
+}
+
+#name::placeholder,
+#comments::placeholder {
+  color: #000;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.comment-btn {
+  font-size: 18px;
+  border: 3px solid hsl(11deg 89% 16%);
+  border-radius: 4px;
+  width: 15rem;
+  padding: 4px 0;
+  margin: 11px 0;
+  background: transparent;
+  box-shadow: 5px 1px 3px 1px;
+  transition: 0.5s;
+}
+
+.comment-btn:hover {
+  color: white;
+  background: hsl(11deg 89% 16%);
+  cursor: pointer;
+}
+
+article {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 0.1rem;
+  background-color: #fff;
+  z-index: 100;
+  overflow-y: auto;
+  backdrop-filter: blur(5px);
+}
+
+.message {
+  background-color: #f5f0e1;
+  color: #441201;
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.add-zoom {
+  animation: zoomIn 0.8s ease-in;
+}
+
+.remove-zoom {
+  animation: zoomOut 0.8s ease-out forwards;
+}
+
+@media screen and (max-width: 576px) {
+  header nav {
+    justify-content: space-evenly;
+  }
+
+  header nav ul {
+    width: 80%;
+  }
+
+  footer {
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .copyright-names {
+    flex-direction: column;
+  }
+
+  .creators {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .creators p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer small {
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  article {
+    left: 0;
+    right: 0;
+  }
+
+  .closing-icon {
+    margin-right: 1rem;
+  }
+
+  .image-placeholder {
+    justify-content: center;
+    width: 20.25rem;
+    height: 20.25rem;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .seafood-name {
+    margin-top: 1rem;
+  }
+
+  .comments-form h2 {
+    text-align: center;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comments-header {
+    margin: 0 1rem;
+  }
+
+  .card-div {
+    flex-direction: column;
+  }
+
+  textarea {
+    width: 20em;
+  }
+}
+
+/* Start Reservations */
+.reservations-header {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-family: 'Italianno', sans-serif;
+  font-size: 2.5rem;
+}
+
+.reservations-form h2 {
+  font-family: 'Italianno', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.reservation-container p span.reservation-date {
+  display: block;
+  color: hsl(50deg 89% 65%);
+  font-size: 13px;
+  padding: 5px;
+}
+
+.reservation-container p span.name {
+  color: hsl(11deg 87% 75%);
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.5rem;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#reservations {
+  font-size: 0.95rem;
+  padding: 0.7rem;
+  color: #000;
+}
+
+#reservations::placeholder {
+  color: #000;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.reservation-btn {
+  padding: 0.5rem 0.55rem;
+  border: 2px solid #000;
+  box-shadow: 0 0 4px 3px #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+@media (max-width: 576px) {
+  .reservations-section .image-placeholder {
+    height: auto;
+    width: 90%;
+  }
+}
+
+/* Start Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #340606;
+  box-shadow: 0 1px 2px 3px #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer.footer div.logo {
+  width: 140px;
+}
+
+footer.footer div.logo img[alt="logo"] {
+  width: 100%;
+  height: 100%;
+}
+
+.copyright-names {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.creators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creators a {
+  margin-top: 0.5rem;
+}
+
+.creators p {
+  font-size: 1.5rem;
+  color: #f5da53;
+  font-weight: 600;
+}
+
+footer.footer .creators a i.fab {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+hr {
+  margin: 1rem 3rem;
+}
+
+small {
+  align-self: center;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+  word-spacing: 1.5rem;
+  color: hsl(50deg 89% 65%);
+  margin-bottom: 1.5rem;
+}
